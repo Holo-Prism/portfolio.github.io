@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .about {
+            text-align: center;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        #contact {
+            margin-bottom: 50px;
+        }
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .skills .skill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .skills .skill .bar {
+            background: #ddd;
+            width: 70%;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .skills .skill .bar span {
+            display: block;
+            height: 100%;
+        }
+        .skills .skill .bar span[data-level="25"] {
+            background: #f44336; /* Rouge */
+            width: 25%;
+        }
+        .skills .skill .bar span[data-level="50"] {
+            background: #ff9800; /* Orange */
+            width: 50%;
+        }
+        .skills .skill .bar span[data-level="75"] {
+            background: #ffeb3b; /* Jaune */
+            width: 75%;
+        }
+        .skills .skill .bar span[data-level="100"] {
+            background: #4caf50; /* Vert */
+            width: 100%;
+        }
+
+        #project {
+        text-align: center;
+        margin: 20px 0;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around; /* Répartit les projets sur la ligne */
+            gap: 20px; /* Ajoute un espace entre les projets */
+            flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si l'espace est insuffisant */
+        }
+
+        .project {
+            flex: 1 1 30%; /* Ajuste la largeur des projets (30% ici) */
+            max-width: 300px; /* Limite la largeur maximale d'un projet */
+            background-color: #f9f9f9; /* Optionnel : ajoute un fond */
+            border: 1px solid #ddd; /* Optionnel : ajoute une bordure */
+            padding: 15px; /* Ajoute de l'espace intérieur */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre */
+            border-radius: 8px; /* Optionnel : rend les bords arrondis */
+        }
+
+        .project h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            display: inline-block;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>À propos de moi</h2>
+    <section class="about">
+    <p>Bonjour, je suis SALA Mattéo, un passionné de nouvelles technologie, de cybersécurité et de gestion de projets. Je suis en 3 ème années de BUT Réseaux et Telecommunication. Découvrez mes réalisations et compétences ici.</p>
+    </section>
+</section>
+
+<section id="contexte" class="">
+    <h2>Contexte en entreprise</h2>
+    <p>Orange Business est une entité du groupe Orange spécialisée dans les services aux entreprises, notamment dans le domaine des télécommunications et du numérique. Elle accompagne les entreprises dans leur transformation digitale en leur fournissant des solutions de connectivité adaptées à leurs besoins.</p>
+    <p>Dans ce cadre, mon rôle de Chargé d’Affaires Fibre Entreprise consiste à gérer les études et le suivi des projets de raccordement fibre, en veillant à optimiser les coûts, respecter les délais et garantir la qualité de service.</p>
+    <p>Les enjeux majeurs de mon poste sont :</p>
+    <ul>
+        <li>Assurer des études de qualité pour proposer des solutions optimisées aux clients,</li>
+        <li>Respecter les contraintes techniques, réglementaires et économiques,</li>
+        <li>Garantir la mise en œuvre efficace des infrastructures en lien avec les équipes techniques et les partenaires.</li>
+    </ul>
+</section>
+
+<section id="missions" class="">
+    <h2>Mes missions</h2>
+    <p>Actuellement, mes missions s’articulent autour de plusieurs axes :</p>
+    <ul>
+        <li><strong>Réalisation des études de raccordement :</strong> Analyse des besoins clients, évaluation des infrastructures existantes et élaboration de scénarios technico-économiques.</li>
+        <li><strong>Planification et gestion des chantiers :</strong> Organisation des travaux, suivi technique et économique, rédaction des comptes rendus et assistance aux maîtres d’œuvre.</li>
+        <li><strong>Suivi administratif et mise à jour des systèmes d’information :</strong> Vérification de la qualité des travaux, validation des retours chantiers, mise à jour des bases documentaires et gestion de la facturation.</li>
+        <li><strong>Missions complémentaires :</strong> Gestion des relations clients et partenaires, coordination avec les équipes techniques, veille réglementaire et technologique, optimisation des coûts et gestion des imprévus.</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Mes projets</h2>
+    <div class="projects-container">
+        <div class="project">
+            <h3>Déploiement fibre pour les entreprises en RS3</h3>
+            <p>Raccordement d'au moins un client en RS3.</p>
+            <a href="#" target="_blank">Voir le projet</a>
+        </div>
+        <div class="project">
+            <h3>Projet tutoré</h3>
+            <p>Création d'un programme simplifiant le remplissage d'une documentation technique Excel.</p>
+            <a href="#" target="_blank">Voir le projet</a>
+        </div>
+        <div class="project">
+            <h3>Intégrer une école d'ingénieur</h3>
+            <p>Poursuivre mes études post  BUT</p>
+            <a href="#" target="_blank">Voir le projet</a>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Compétences :</h2>
+
+    <h3>RT1 - Administrer les réseaux et l’Internet</h3>
+
+    <div class="skills">
+        <div class="skill">
+            <a href="Compétence1.pdf"><span>AC31.01 Concevoir un projet de réseau informatique d’une entreprise en intégrant
+                les problématiques de haute disponibilité, de QoS, de sécurité et de supervision</span>***</a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence2.pdf"><span>AC31.02 Réaliser la documentation technique de ce projet</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence3.pdf"><span>AC31.03 Réaliser une maquette de démonstration du projet</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence4.pdf"><span>AC31.04 Défendre/argumenter un projet</span></a>
+            <div class="bar"><span data-level=100></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence5.pdf"><span>AC31.05 Communiquer avec les acteurs du projet</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence6.pdf"><span>AC31.06 Gérer le projet et les différentes étapes de sa mise en oeuvre en respectant les délais</span></a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+    </div>
+
+    <br>
+
+    <h3>RT2 - Connecter les entreprises et les usagers</h3>
+
+    <div class="skills">
+        <div class="skill">
+            <a href="Compétence7.pdf"><span>AC32.01 Déployer un système de communication pour l’entreprise
+            </span></a>
+            <div class="bar"><span data-level=0></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence8.pdf"><span>AC32.02 Déployer un réseau d’accès sans fil pour le réseau d’entreprise en intégrant les enjeux de la sécurité</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence9.pdf"><span>AC32.03 Déployer un réseau d’accès fixe ou mobile pour un opérateur de télécommunications en intégrant la sécurité</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence10.pdf"><span>AC32.04 Permettre aux collaborateurs de se connecter de manière sécurisée au système d’information de l’entreprise</span>***</a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence11.pdf"><span>AC32.05 Collaborer en mode projet en français et en anglais</span></a>
+            <div class="bar"><span data-level=100></span></div>
+        </div>
+    </div>
+
+    <br>
+
+    <h3>RT3 - Créer des outils et des applications informatiques pour les R&T</h3>
+
+    <div class="skills">
+        <div class="skill">
+            <a href="Compétence12.pdf"><span>AC33.01 Élaborer les spécifications techniques et le cahier des charges d’une application informatique</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence13.pdf"><span>AC33.02 Mettre en place un environnement de travail collaboratif informatique</span>***</a>
+            <div class="bar"><span data-level=100></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence14.pdf"><span>AC33.03 Participer à la formation des utilisateurs</span></a>
+            <div class="bar"><span data-level=0></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence15.pdf"><span>AC33.04 Déployer et maintenir une solution informatique</span>***</a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence16.pdf"><span>AC33.05 S’informer sur les évolutions et les nouveautés technologiques</span></a>
+            <div class="bar"><span data-level=75></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence17.pdf"><span>AC33.06 Sécuriser l’environnement numérique d’une application</span></a>
+            <div class="bar"><span data-level=></span></div>
+        </div>
+    </div>
+
+    <br>
+
+    <h3>Cyber1 - Administrer un système d’information sécurisé</h3>
+
+    <div class="skills">
+        <div class="skill">
+            <a href="Compétence18.pdf"><span>Participer activement à une analyse de risque pour définir une politique de sécurité pour une petite structure (Identifier les besoins de sécurité (niveau
+                2, niveau 3/4, applicatif</span></a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence19.pdf"><span>Mettre en œuvre des outils avancés de sécurisation d’une infrastructure du réseau (filtrer le trafic réseau avec des mécanismes avancés jusqu’à l’IDS/IPS,
+                Interconnecter des sites (VPN de différents types : IPSec, openVPN, TLS, VPN MPLS), gérer des profils d’utilisateur, gestion des accès WiFi, . . . )</span>***</a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+        <div class="skill">
+            <a href="cCompétence20.pdf"><span>Sécuriser les services (Mail, Web, DNS, LDAP, AD, ToIP, . . . )</span></a>
+            <div class="bar"><span data-level=0></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence21.pdf"><span>Proposer une architecture sécurisée de système d’information pour une petite structure (choix des composants réseau et système: switch, routeur, firewall,
+                WiFi, IDS/IPS, accès distant VPN, disposition physique / construction du SI jusqu’au déploiement, sauvegardes, . . . )</span>***</a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+    </div>
+
+    <br>
+
+    <h3>Cyber 2 - Administrer un système d’information sécurisé</h3>
+
+    <div class="skills">
+        <div class="skill">
+            <a href="Compétence22.pdf"><span>Surveiller l’activité du système d’information (Installation (build), Administration (run) de SIEM (Security Information and Event Management): ELK, QRadar, Splunk, . . . ,
+                métrologie, identifier et exploiter les événements de sécurité sur des enregistrement d’historiques (remontée de logs), . . . automatiser les tâches (Ansible, puppet. . . ))</span>***</a>
+            <div class="bar"><span data-level=50></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence23.pdf"><span>Appliquer une méthodologie de tests de pénétration (pentesting, utilisation avancée des outils, aller vers la remédiation des failles)</span></a>
+            <div class="bar"><span data-level=0></span></div>
+        </div>
+        <div class="skill">
+            <a href="Compétence24.pdf"><span>Gérer une crise suite à un incident de sécurité (isolation, préservation de preuves (copies de mémoires, de logs, de supports de stockage, . . . ), application du PRA,
+                résilience, forensic, . . . , CERT, CSIRT, approche collaborative pour apprendre à mettre les compétences en commun, à savoir s’organiser, à travailler en parallèle pour être plus
+                efficace)"</span></a>
+            <div class="bar"><span data-level=0></span></div>
+        </div>
+    </div>
+
+</section>
+
+<section id="analyse-reflexive" class="">
+    <h2>Analyse réflexive global et auto-évaluation des AC  mis en oeuvre lors de l'alternance</h2>
+    
+    <h3>Que se passe-t-il ?</h3>
+    <p>Mon travail consiste à gérer de bout en bout les projets de raccordement fibre pour les entreprises. Cela implique de nombreuses étapes, allant de l’étude technique jusqu’à la validation des travaux et la mise à jour des systèmes d’information.</p>
+
+    <h3>Comment cela se passe-t-il ?</h3>
+    <p>Le processus suit un déroulement précis :</p>
+    <ol>
+        <li>Étude du dossier</li>
+        <li>Analyse des infrastructures existantes et des scénarios possibles</li>
+        <li>Organisation et suivi des travaux sur le terrain</li>
+        <li>Vérification des travaux réalisés et validation finale</li>
+    </ol>
+
+    <h3>Pourquoi cela se passe-t-il ainsi ?</h3>
+    <p>Cette organisation permet d’assurer un suivi rigoureux et d’éviter les erreurs pouvant entraîner des coûts supplémentaires ou des retards de livraison. Toutefois, plusieurs facteurs peuvent impacter le déroulement des projets :</p>
+    <ul>
+        <li>Imprévus techniques sur le terrain</li>
+        <li>Contraintes réglementaires spécifiques</li>
+        <li>Délais serrés nécessitant une coordination efficace</li>
+    </ul>
+
+    <h3>Que peut-on améliorer ?</h3>
+    <ul>
+        <li>Optimisation des délais de traitement des études</li>
+        <li>Renforcement des échanges avec les équipes terrain pour mieux anticiper les contraintes</li>
+        <li>Approfondissement des connaissances sur les aspects réglementaires et économiques des projets</li>
+    </ul>
+
+    <h3>Comment peut-on améliorer ?</h3>
+    <ul>
+        <li>Automatisation de certaines tâches de mise à jour des SI</li>
+        <li>Utilisation d’outils de suivi plus précis pour la gestion des travaux</li>
+        <li>Formation complémentaire sur les normes et réglementations du génie civil</li>
+    </ul>
+</section>
+
+<section id="comparaison-objectifs" class="">
+    <h2>Comparaison avec mes objectifs initiaux</h2>
+    <p>Au début de mon alternance, mon objectif était de comprendre le rôle d’un Chargé d’Affaires et d’acquérir de l’expérience sur la gestion de projet télécoms. Aujourd’hui, je constate que j’ai gagné en autonomie et en efficacité sur plusieurs aspects :</p>
+    <ul>
+        <li>Meilleure gestion des études techniques</li>
+        <li>Meilleure communication avec les différents acteurs</li>
+        <li>Capacité à gérer plusieurs projets en parallèle</li>
+    </ul>
+    <p>Cependant, je dois encore améliorer certains points, notamment sur l’optimisation des délais et l’approfondissement des aspects réglementaires.</p>
+</section>
+
+<section id="cv">
+    <h2>Mon CV</h2>
+    <p>Téléchargez mon CV ici : <a href="file:///C:/Users/salam/Documents/E-portfolio/cv.pdf" download="file:///C:/Users/salam/Documents/E-portfolio/cv.pdf">Télécharger le CV</a></p>
+    <iframe src="file:///C:/Users/salam/Documents/E-portfolio/cv.pdf" width="100%" height="500px"></iframe>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Vous pouvez me contacter par email : <a href="mailto:salamatteo18@gmail.com">salamatteo18@gmail.com</a></p>
+    <p>Ou sur LinkedIn : <a href="https://www.linkedin.com/in/matt%C3%A9o-sala-5557ba25a/" target="_blank">Mon Profil LinkedIn</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 [Votre Nom]. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
