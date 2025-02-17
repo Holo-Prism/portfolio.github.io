@@ -141,7 +141,62 @@
             font-weight: bold;
             margin-top: 10px;
         }
+
+        .reflection-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card-front {
+            background: linear-gradient(to right, #007BFF, #00c6ff);
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .flip-card-back {
+            background: white;
+            color: black;
+            transform: rotateY(180deg);
+            padding: 15px;
+        }
+
     </style>
+
 </head>
 <body>
 
@@ -238,56 +293,6 @@
             <a href="Compétence6.pdf"><span>AC31.06 Gérer le projet et les différentes étapes de sa mise en oeuvre en respectant les délais</span></a>
             <div class="bar"><span data-level=50></span></div>
         </div>
-
-        <h2>Analyse Réflexive</h2>
-    
-        <div class="reflection">
-            <h3>Conception d’un projet de réseau informatique (AC31.01)</h3>
-            <p>Lors de la conception du projet de réseau, j'ai pris en compte des facteurs importants comme la sécurité, la haute disponibilité et la QoS. Cependant, je réalise que j’aurais pu être plus proactif dans l'exploration de solutions alternatives et la mise en place d’une stratégie de gestion de crise pour mieux anticiper les imprévus. Une réflexion plus approfondie sur l’impact des choix techniques sur le long terme serait un axe d’amélioration pour garantir une plus grande flexibilité.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Réalisation de la documentation technique (AC31.02)</h3>
-            <p>La documentation que j’ai produite a permis de clarifier les choix techniques, mais j’ai identifié que je pourrais améliorer la structure et la présentation des informations pour faciliter leur compréhension. Pour cela, je devrais intégrer davantage de schémas explicatifs et de tableaux comparatifs afin que chaque partie prenante, peu importe son niveau technique, puisse accéder aux informations dont elle a besoin de manière plus intuitive.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Maquette de démonstration du projet (AC31.03)</h3>
-            <p>La création de la maquette de démonstration m'a permis de tester l'implémentation du projet dans un environnement contrôlé, mais je me rends compte qu’une version plus interactive, permettant aux utilisateurs de tester différentes configurations, serait plus bénéfique. Je pourrais également améliorer ma gestion du temps pour rendre cette phase plus fluide, afin de valider les choix techniques plus rapidement tout en garantissant un retour d’expérience plus complet.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Défense et argumentation du projet (AC31.04)</h3>
-            <p>Lors de la défense du projet, j’ai exposé mes choix techniques de manière structurée, mais je constate que je pourrais renforcer mes arguments avec des exemples concrets de cas d’utilisation ou des données chiffrées. Pour améliorer mes présentations, il serait utile d’anticiper les questions ou préoccupations possibles de mes interlocuteurs et de préparer des réponses argumentées en conséquence.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Gestion du projet et respect des délais (AC31.06)</h3>
-            <p>La gestion du projet a été réalisée en respectant les délais, mais j'ai remarqué qu'il serait plus efficace de mieux anticiper les phases de transition entre les différentes étapes du projet. Une meilleure organisation, avec des points de suivi réguliers et des ajustements en temps réel, permettrait de limiter les risques de retard et de mieux gérer les imprévus sans impacter le calendrier global.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Déploiement d’un réseau d’accès sans fil (AC32.02)</h3>
-            <p>J’ai mis en œuvre un réseau sans fil sécurisé, mais j'ai pris conscience qu'il me reste à approfondir mes compétences en matière de segmentation réseau pour mieux isoler les accès internes et invités. Une meilleure gestion de la configuration des bornes sans fil et une plus grande vigilance sur l’évolution des menaces pourraient m’aider à renforcer encore la sécurité du réseau.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Connexion sécurisée au système d’information de l’entreprise (AC32.04)</h3>
-            <p>La mise en place de solutions VPN et la gestion des identités ont été efficaces, mais il me faut encore progresser dans l'implémentation de solutions de sécurité de manière proactive, comme l'authentification multi-facteurs. Une attention particulière à la gestion des droits d'accès et à la mise à jour des protocoles de sécurité me permettrait d’augmenter la sécurité des accès.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Élaboration des spécifications techniques et du cahier des charges d’une application informatique (AC33.01)</h3>
-            <p>Dans l’élaboration des spécifications techniques et du cahier des charges, j’ai pris soin de bien définir les besoins fonctionnels et techniques. Cependant, je réalise qu'il serait bénéfique pour moi d’impliquer davantage les utilisateurs finaux dès les premières étapes pour m'assurer que leurs besoins sont totalement compris et intégrés dans les documents. Une meilleure anticipation des contraintes techniques et une révision plus régulière des spécifications en fonction de l’avancement du projet améliorerait la clarté et la précision du cahier des charges.</p>
-        </div>
-
-        <div class="reflection">
-            <h3>Gestion de crise suite à un incident de sécurité (PRA, Forensic, CERT, CSIRT)</h3>
-            <p>J'ai eu l'occasion de gérer des incidents de sécurité, mais je me rends compte qu'une meilleure préparation et une planification plus rigoureuse du Plan de Reprise d’Activité (PRA) seraient des améliorations possibles. La gestion des preuves (copies de mémoires, logs, etc.) pourrait être renforcée par une meilleure documentation et un suivi rigoureux des procédures. De plus, lors des incidents, je pourrais améliorer la collaboration en équipe (CERT, CSIRT) en anticipant mieux les rôles et responsabilités de chacun pour être plus réactif et efficace.</p>
-        </div>
-
-    </div>
-
     <br>
 
     <h3>RT2 - Connecter les entreprises et les usagers</h3>
@@ -395,6 +400,42 @@
         </div>
     </div>
 
+    <h2>Analyse Réflexive</h2>
+
+        <div class="reflection-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Conception d’un projet de réseau informatique (AC31.01)</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Lors de la conception du projet de réseau, j'ai pris en compte des facteurs importants comme la sécurité, la haute disponibilité et la QoS. Cependant, je réalise que j’aurais pu être plus proactif dans l'exploration de solutions alternatives et la mise en place d’une stratégie de gestion de crise pour mieux anticiper les imprévus.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Réalisation de la documentation technique (AC31.02)</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>La documentation que j’ai produite a permis de clarifier les choix techniques, mais j’ai identifié que je pourrais améliorer la structure et la présentation des informations pour faciliter leur compréhension.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Maquette de démonstration du projet (AC31.03)</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>La création de la maquette de démonstration m'a permis de tester l'implémentation du projet dans un environnement contrôlé, mais je me rends compte qu’une version plus interactive, permettant aux utilisateurs de tester différentes configurations, serait plus bénéfique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
 </section>
 
 <section id="analyse-reflexive" class="">
